@@ -3,7 +3,7 @@ import { createBrowserRouter } from 'react-router-dom'
 import AppInner from './layout/AppInner/AppInner'
 // import Landing from './components/Landing/Landing'
 
-import About from './pages/about.mdx'
+import About from './pages/about/About'
 import CV from './pages/cv/CV'
 import Projects, {projectChildren} from './pages/projects/Projects'
 

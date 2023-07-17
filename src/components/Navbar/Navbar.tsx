@@ -5,9 +5,9 @@ import { useWindowContext } from "../../context/WindowContext"
 
 const NavbarLink: React.FC<{name: string}> = (props) => {
     return (
-        <div className={styles.link}>
-            <Link to={props.name.toLowerCase()}>
-                <h2>{props.name}</h2>
+        <div className={styles.linkContainer}>
+            <Link to={props.name.toLowerCase()} style={{textDecoration: "none"}}>
+                <h2 className={styles.linkText}>{props.name}</h2>
             </Link>
         </div>
     )

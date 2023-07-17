@@ -1,0 +1,48 @@
+
+.main {
+    display: flex;
+    background-color: white;
+    align-items: stretch;
+    margin: 10% 0;
+}
+
+.title {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.box {
+    flex-basis: 100px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.boxLeft {
+    justify-content: stretch;
+    align-items: center;
+}
+
+.boxRight {
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.picture {
+    width: 20vw;
+}
+
+.imgContainer {
+    margin: 15px 0;
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 30px;
+    margin: 0 5px;
+}
+
+/* .text {
+} */

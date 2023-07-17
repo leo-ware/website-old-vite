@@ -1,4 +1,5 @@
 
-/* .contentContainer {
-    overflow-y: scroll;
-} */
+.contentContainer {
+    /* overflow-y: scroll; */
+    min-height: 100%;
+}

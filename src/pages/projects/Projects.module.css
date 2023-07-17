@@ -1,0 +1,32 @@
+
+.projectWidgetContainer {
+    border-left: 2px solid black;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.thumbnail {
+    width: 60px;
+    margin: 0 10px;
+}
+
+.projectTextContainer {
+    padding: 3px 0;
+    flex-grow: 1;
+}
+
+.projectLink {
+    text-decoration: none;
+    color: black;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.projectLink:hover {
+    color: grey;
+}
+
+.projectDescription {
+    max-width: 100%;
+}

@@ -1,5 +1,5 @@
 import React from "react"
-import styles from "./Content.module.css"
+// import styles from "./Content.module.css"
 
 type ContentType = {
     title?: string
@@ -8,10 +8,13 @@ type ContentType = {
 
 const Content: React.FC<ContentType> = (props) => {
     return (
-        <div className={styles.contentContainer}>
-            {props.children}
-        </div>
+        <>{props.children}</>
     )
+    // return (
+    //     <div className={styles.contentContainer}>
+    //         {props.children}
+    //     </div>
+    // )
 }
 
 export default Content

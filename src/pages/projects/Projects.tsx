@@ -1,35 +1,37 @@
 import React from "react"
 import { Link, Outlet, RouteObject, matchPath, useLocation } from "react-router-dom"
+import styles from "./Projects.module.css"
 
-import PQP from "./pqp.mdx"
+import projects from "./project_manifest"
 
-type Project = {
+export type ProjectType = {
     name: string
     description?: string
     thumbnail?: string
     element: React.ReactNode
 }
 
-const projects: Project[] = [
-    {
-        name: "PQP",
-        element: <PQP />,
-        description: "Subroutines for structural causal modeling",
-    }
-]
-
-export const projectPath = (proj: Project): string => proj.name.toLowerCase().replace(" ", "-")
-export const projectLink = (proj: Project): string => `/projects/${projectPath(proj)}`
+export const projectPath = (proj: ProjectType): string => proj.name.toLowerCase().replace(" ", "-")
+export const projectLink = (proj: ProjectType): string => `/projects/${projectPath(proj)}`
 
 export const projectChildren: RouteObject[] = projects.map(project => ({
     path: projectPath(project),
     element: project.element
 }))
 
-const ProjectWidget: React.FC<{project: Project}> = ({project}) => (
-    <div>
-        <Link to={projectLink(project)}>{project.name}</Link>
-        <p>{project.description}</p>
+const ProjectWidget: React.FC<{project: ProjectType}> = ({project}) => (
+    <div className={styles.projectWidgetContainer}>
+        <div className={styles.thumbnailContainer}>
+            <Link to={projectLink(project)}>
+                <img className={styles.thumbnail} src={project.thumbnail} />
+            </Link>
+        </div>
+        <div className={styles.projectTextContainer}>
+            <Link to={projectLink(project)} className={styles.projectLink}>
+                {project.name}
+            </Link>
+            <div className={styles.projectDescription}>{project.description}</div>
+        </div>
     </div>
 )
 

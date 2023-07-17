@@ -24,8 +24,18 @@
 
 }
 
-.link {
-    margin: 0 2%;
+.linkContainer {
+    margin: 0 4%;
+    text-decoration: none;
+}
+
+.linkText {
+    text-decoration: none;
+    color: black;
+}
+
+.linkText:hover {
+    color: grey;
 }
 
 .dd {
