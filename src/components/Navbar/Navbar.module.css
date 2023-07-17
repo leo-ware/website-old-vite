@@ -1,0 +1,43 @@
+
+.main {
+    height: 100%;
+    width: 90%;
+    padding: 0 5%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.right {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.link {
+    margin: 0 2%;
+}
+
+.dd {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: pink;
+}
+
+.dropdownIcon {
+    height: 30px;
+    width: 30px;
+    background-color: black;
+}

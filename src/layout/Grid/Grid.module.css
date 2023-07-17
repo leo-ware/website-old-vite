@@ -1,0 +1,49 @@
+
+.main {
+    height: 100vh;
+    width: 100vw;
+    max-height: 100vh;
+    max-width: 100vw;
+
+    background-color: blue;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: stretch;
+}
+
+.headerContainer {
+    background-color: green;
+    flex-basis: 8%;
+    flex-grow: 0;
+    /* width: 100%; */
+}
+
+.contentOuter {
+    background-color: red;
+    max-height: 100%;
+    flex-basis: 0;
+    flex-grow: 1;
+    overflow: scroll;
+}
+
+.scrollContainer {
+    display: flex;
+    justify-content: stretch;
+    min-height: 100%;
+}
+
+.contentMargin {
+    background-color: orange;
+    flex-basis: 6vw;
+    flex-grow: 0.5;
+}
+
+.contentInner {
+    background-color: yellow;
+    flex-basis: 400px;
+    flex-grow: 1;
+    max-height: 100%;
+}
