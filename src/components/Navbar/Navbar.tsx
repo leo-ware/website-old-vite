@@ -23,20 +23,18 @@ const NavbarDropDownIcon: React.FC<{onClick?: () => void}> = (props) => {
     )
 }
 
-const Navbar: React.FC = () => {
+const Navbar: React.FC<{scrolled?: boolean, overScrolled?: boolean}> = ({scrolled}) => {
 
     const {mobile} = useWindowContext()
     const [open, setOpen] = useState(false)
-
-    console.log(open)
 
     if (!mobile && open) {
         setOpen(false)
     }
 
     return (
-        <div className={styles.main}>
-            <div className={styles.nav}>
+        <div className={styles.main + " " + (scrolled && styles.mainScrolled)}>
+            <div className={styles.nav + " " + (open && styles.navOpen)}>
                 <div className={styles.left + " " + styles.lr}>
                     <div className={styles.name}>
                         <h2>Leo Ware</h2>
@@ -46,7 +44,11 @@ const Navbar: React.FC = () => {
                     {mobile
                         ? <NavbarDropDownIcon onClick={() => setOpen(!open)}/>
                         : ["About", "Projects", "CV"].map((name) => (
-                            <NavbarLink key={name} name={name}/>
+                            <div key={name} className={styles.linkContainer}>
+                                <Link to={name.toLowerCase()} style={{textDecoration: "none"}}>
+                                    <h2 className={styles.linkText}>{name}</h2>
+                                </Link>
+                            </div>
                         ))
                     }
                 </div>
@@ -54,7 +56,11 @@ const Navbar: React.FC = () => {
             {open &&
                 <div className={styles.dd}>
                     {["About", "Projects", "CV"].map((name) => (
-                            <NavbarLink name={name}/>
+                            <div className={styles.linkContainer}>
+                                <Link to={name.toLowerCase()} className={styles.linkDD}>
+                                    <h4 className={styles.linkText}>{name}</h4>
+                                </Link>
+                            </div>
                         ))}
                 </div>}
         </div>

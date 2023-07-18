@@ -75,7 +75,6 @@ const AwardWidget: React.FC<{award: typeof cv_json.awards[0]}> = ({award}) => {
 }
 
 const CV: React.FC = () => {
-    console.log(cv_json)
     return (
         <div className={styles.main}>
             <h1>Resume</h1>

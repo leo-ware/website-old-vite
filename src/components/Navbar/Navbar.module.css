@@ -1,13 +1,14 @@
 
 .main {
     height: 100%;
-    width: 90%;
-    padding: 0 5%;
-    
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: stretch;
+}
+
+.mainScrolled {
+    border-bottom: 1px solid grey;
 }
 
 .nav {
@@ -15,18 +16,32 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    
+    width: 90%;
+    padding: 0 5%;
+}
+
+.navOpen {
+    border-bottom: 1px solid grey;
 }
 
 .right {
     display: flex;
     justify-content: space-between;
-
+    margin-right: 3%;
 }
 
 .linkContainer {
-    margin: 0 4%;
+    padding: 0 4%;
     text-decoration: none;
+}
+
+.linkDD{
+    margin: 0;
+    text-decoration: none;
+}
+
+.linkDD > h4 {
+    margin: 10px;
 }
 
 .linkText {
@@ -43,7 +58,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    background-color: pink;
+    border-bottom: 1px solid grey;
 }
 
 .dropdownIcon {
